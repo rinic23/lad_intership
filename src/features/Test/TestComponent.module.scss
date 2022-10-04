@@ -4,3 +4,9 @@
   max-width: 400px;
   padding: 20px;
 }
+
+.test_btn {
+  :global(.ant-btn) {
+    background-color: yellow;
+  }
+}

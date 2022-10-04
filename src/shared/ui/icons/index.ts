@@ -1,1 +1,1 @@
-export {};
+export { LadIcon } from './LadIcon';

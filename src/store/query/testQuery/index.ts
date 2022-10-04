@@ -9,8 +9,10 @@ export type TTestData = {
 
 export const extendedApi = platformApi.injectEndpoints({
   endpoints: (build) => ({
-    getTestData: build.query<TTestData, void>({
+    getTestData: build.query<TTestData, { id: number }>({
       query: () => ({ url: '/todos/1', method: 'GET' }),
+      transformResponse: (data: any) => data.map(),
+      keepUnusedDataFor: 0,
     }),
   }),
 
