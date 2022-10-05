@@ -27,27 +27,27 @@ export const TestComponent = ({ a }: TProps) => {
 
       {/* варианты кнопок начало */}
       <div style={{ background: '#01050D', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <CustomButton buttonStyleClasses="button__large">Click</CustomButton>
-        <CustomButton buttonStyleClasses="button__medium">Click</CustomButton>
-        <CustomButton buttonStyleClasses="button__small">Click</CustomButton>
-        <CustomButton buttonStyleClasses="button__rectangular" {...{ icon: <PlusIcon /> }} />
+        <CustomButton customSize="large">Click</CustomButton>
+        <CustomButton customSize="medium">Click</CustomButton>
+        <CustomButton customSize="small">Click</CustomButton>
+        <CustomButton customSize="rectangular" {...{ icon: <PlusIcon /> }} />
       </div>
       <div style={{ background: '#01050D', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <CustomButton buttonStyleClasses="button__large button__light">Click</CustomButton>
-        <CustomButton buttonStyleClasses="button__rectangular button__light" {...{ icon: <PlusIcon /> }} />
+        <CustomButton customSize="large" customType="light">Click</CustomButton>
+        <CustomButton customSize="rectangular" customType="light" {...{ icon: <PlusIcon /> }} />
       </div>
       <div style={{ background: '#01050D', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <CustomButton buttonStyleClasses="button__large button__transparent">Click</CustomButton>
-        <CustomButton buttonStyleClasses="button__rectangular button__transparent" {...{ icon: <PlusIcon /> }} />
+        <CustomButton customSize="large" customType="transparent">Click</CustomButton>
+        <CustomButton customSize="rectangular" customType="transparent" {...{ icon: <PlusIcon /> }} />
       </div>
       <div style={{ background: '#01050D', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <CustomButton buttonStyleClasses="button__large" {...{ disabled: true }}>Click</CustomButton>
-        <CustomButton buttonStyleClasses="button__rectangular button__light" {...{ icon: <PlusIcon />, disabled: true }} />
+        <CustomButton customSize="large" {...{ disabled: true }}>Click</CustomButton>
+        <CustomButton customSize="rectangular" {...{ icon: <PlusIcon />, disabled: true }} />
       </div>
       <div style={{ background: '#ffffff', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <CustomButton buttonStyleClasses="button__large button__transparent">Click</CustomButton>
-        <CustomButton buttonStyleClasses="button__rectangular button__transparent" {...{ icon: <PlusIcon /> }} />
-        <CustomButton buttonStyleClasses="button__rectangular button__light" {...{ icon: <PlusIcon /> }} />
+        <CustomButton customSize="large" customType="transparent">Click</CustomButton>
+        <CustomButton customSize="rectangular" customType="transparent" {...{ icon: <PlusIcon /> }} />
+        <CustomButton customSize="rectangular" customType="light" {...{ icon: <PlusIcon /> }} />
       </div>
       {/* варианты кнопок конец */}
 
