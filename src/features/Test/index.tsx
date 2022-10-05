@@ -27,10 +27,10 @@ export const TestComponent = ({ a }: TProps) => {
 
       {/* варианты кнопок начало */}
       <div style={{ background: '#01050D', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <CustomButton customSize="large">Click</CustomButton>
-        <CustomButton customSize="medium">Click</CustomButton>
-        <CustomButton customSize="small">Click</CustomButton>
-        <CustomButton customSize="rectangular" {...{ icon: <PlusIcon /> }} />
+        <CustomButton customSize="large" customType="default">Click</CustomButton>
+        <CustomButton customSize="medium" customType="default">Click</CustomButton>
+        <CustomButton customSize="small" customType="default">Click</CustomButton>
+        <CustomButton customSize="rectangular" customType="default" {...{ icon: <PlusIcon /> }} />
       </div>
       <div style={{ background: '#01050D', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
         <CustomButton customSize="large" customType="light">Click</CustomButton>
@@ -41,8 +41,8 @@ export const TestComponent = ({ a }: TProps) => {
         <CustomButton customSize="rectangular" customType="transparent" {...{ icon: <PlusIcon /> }} />
       </div>
       <div style={{ background: '#01050D', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <CustomButton customSize="large" {...{ disabled: true }}>Click</CustomButton>
-        <CustomButton customSize="rectangular" {...{ icon: <PlusIcon />, disabled: true }} />
+        <CustomButton customSize="large" customType="default" {...{ disabled: true }}>Click</CustomButton>
+        <CustomButton customSize="rectangular" customType="default" {...{ icon: <PlusIcon />, disabled: true }} />
       </div>
       <div style={{ background: '#ffffff', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
         <CustomButton customSize="large" customType="transparent">Click</CustomButton>

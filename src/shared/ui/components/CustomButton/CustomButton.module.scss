@@ -4,8 +4,6 @@
   justify-content: center;
   width: fit-content;
   height: fit-content;
-  color: white;
-  background-color: #004BFF;
   border-radius: 8px;
   border: 2px solid transparent;
   box-shadow: none;
@@ -13,7 +11,32 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.01em;
+}
 
+.large {
+  @extend .button;
+  padding: 14.5px 32px;
+}
+
+.medium {
+  @extend .button;
+  padding: 12px 24px;
+}
+
+.small {
+  @extend .button;
+  padding: 8px 20px;
+}
+
+.rectangular {
+  @extend .button;
+  padding: 8px;
+}
+
+.default {
+  @extend .button;
+  background-color: #004BFF;
+  color: white;
   &:hover {
     background: #0141DB;
     color: white;
@@ -53,26 +76,6 @@
       }
     }
   }
-}
-
-.large {
-  @extend .button;
-  padding: 14.5px 32px;
-}
-
-.medium {
-  @extend .button;
-  padding: 12px 24px;
-}
-
-.small {
-  @extend .button;
-  padding: 8px 20px;
-}
-
-.rectangular {
-  @extend .button;
-  padding: 8px;
 }
 
 .light {

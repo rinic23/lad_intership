@@ -5,8 +5,8 @@ import style from './CustomButton.module.scss';
 type TProps = {
   children?: string;
   buttonStyleClasses?: string;
-  customSize?: any;
-  customType?: any;
+  customSize?: 'large' | 'medium' | 'small' | 'rectangular';
+  customType?: 'default' |'light' | 'transparent' ;
 }
 
 const stylesObj = {
@@ -17,6 +17,7 @@ const stylesObj = {
     rectangular: style.rectangular,
   },
   color: {
+    default: style.default,
     light: style.light,
     transparent: style.transparent,
   },
@@ -25,9 +26,8 @@ const stylesObj = {
 export const CustomButton = ({
   children,
   customSize = 'medium',
-  customType,
+  customType = 'default',
   ...props
 }: TProps) => (
-  // @ts-ignore
   <Button className={`${stylesObj.size[customSize]} ${stylesObj.color[customType]}`} {...props}>{children}</Button>
 );
