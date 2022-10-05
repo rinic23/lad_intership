@@ -11,3 +11,130 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  background-color: #004BFF;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+
+  &:hover {
+    background: #0141DB;
+    color: white;
+    border: 2px solid transparent;
+  }
+
+  &:focus {
+    background: #004BFF;
+    color: white;
+    border: 2px solid #58D9EF;
+    svg path {
+      fill: white
+    }
+  }
+
+  &:active {
+    background: #0132A8;
+    color: white;
+    border: 2px solid transparent;
+  }
+  
+  &:disabled {
+    background: #808286;
+    color: #B7BDC8;
+    svg path {
+      fill: #B7BDC8
+    }
+    &:hover {
+      background: #808286;
+      color: #B7BDC8;
+    }
+    &:active {
+      background: #808286;
+      color: #B7BDC8;
+      svg path {
+        fill: #B7BDC8
+      }
+    }
+  }
+
+  &__large {
+    padding: 14.5px 32px;
+  }
+  &__medium {
+    padding: 12px 24px;
+  }
+  &__small {
+    padding: 8px 20px;
+  }
+  &__rectangular {
+    padding: 8px;
+  }
+
+  &__light {
+    background-color: white;
+    color: #01050D;
+    svg path {
+      fill: #01050D
+    }
+    &:hover {
+      background-color: #E7E9EC;
+      color: #01050D;
+    }
+    &:focus {
+      // в макете нет стилей
+      background-color: #E7E9EC;
+      color: #01050D;
+      svg path {
+        fill: #01050D
+      }
+    }
+    &:active {
+      // в макете нет стилей
+      background-color: #E7E9EC;
+      color: #01050D;
+      svg path {
+        fill: #01050D
+      }
+    }
+  }
+  
+  &__transparent {
+    background-color: transparent;
+    color: #1A5DFF;
+    svg path {
+      fill: #1A5DFF
+    }
+
+    &:hover {
+      background-color: rgba(0, 75, 255, 0.2);
+      color: #1A5DFF;
+    }
+    &:focus {
+      // в макете нет стилей
+      background-color: rgba(0, 75, 255, 0.2);
+      color: #1A5DFF;
+      svg path {
+        fill: #1A5DFF
+      }
+    }
+    &:active {
+      // в макете нет стилей
+      background-color: rgba(0, 75, 255, 0.2);
+      color: #1A5DFF;
+      svg path {
+        fill: #1A5DFF
+      }
+    }
+  }
+}
