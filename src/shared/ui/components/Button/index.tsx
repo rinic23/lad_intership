@@ -1,8 +1,10 @@
 import React from 'react';
-import { Button as ButtonAntd } from 'antd';
+import { Button as ButtonAntd, ButtonProps as AntButtonProps } from 'antd';
 import { buttonSize, buttonType } from './constants';
 
-type TProps = {
+type AntButtonPropsOmit = Omit<AntButtonProps, 'size' | 'type'>;
+
+type TProps = AntButtonPropsOmit & {
   children?: string;
   buttonStyleClasses?: string;
   size?: 'large' | 'medium' | 'small' | 'rectangular';
