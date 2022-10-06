@@ -22,7 +22,7 @@ export const TestComponent = ({ a }: TProps) => {
     <div className={style.wrapper}>
       <span>{`Test count ${count}`}</span>
       <div className={style.test_btn}>
-        <ButtonAntd onClick={buttonHandler}>Нажми на меня</ButtonAntd>
+        <ButtonAntd onClick={buttonHandler} type="dashed">Нажми на меня</ButtonAntd>
       </div>
 
       {/* варианты кнопок начало */}
