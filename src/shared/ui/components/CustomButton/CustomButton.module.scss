@@ -11,6 +11,15 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.01em;
+  &:hover {
+    border: 2px solid transparent;
+  }
+  &:focus {
+    border: 2px solid #58D9EF;
+  }
+  &:active {
+    border: 2px solid transparent;
+  }
 }
 
 .large {
@@ -40,22 +49,18 @@
   &:hover {
     background: #0141DB;
     color: white;
-    border: 2px solid transparent;
   }
 
   &:focus {
     background: #004BFF;
     color: white;
-    border: 2px solid #58D9EF;
     svg path {
       fill: white
     }
   }
-
   &:active {
     background: #0132A8;
     color: white;
-    border: 2px solid transparent;
   }
   
   &:disabled {
