@@ -7,7 +7,7 @@ export const buttonSize = {
   rectangular: style.rectangular,
 };
 
-export const buttonColor = {
+export const buttonType = {
   default: style.default,
   light: style.light,
   transparent: style.transparent,
