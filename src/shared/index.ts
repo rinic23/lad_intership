@@ -10,5 +10,5 @@ export { LadIcon,
     HeartIcon,
     MenuIcon,
     PlusIcon,
-    StarIcon
+    StarIcon,
 } from './ui';

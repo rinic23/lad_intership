@@ -1,6 +1,6 @@
 export { LadIcon } from './LadIcon';
 export { ArrowIcon } from './ArrowIcon';
-export { ChevronIcon} from './ChevronIcon';
+export { ChevronIcon } from './ChevronIcon';
 export { DateIcon } from './DateIcon';
 export { OnlineIcon } from './OnlineIcon';
 export { TimeIcon } from './TimeIcon';

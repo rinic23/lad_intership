@@ -1,4 +1,4 @@
-export {  LadIcon,
+export { LadIcon,
     ArrowIcon,
     ChevronIcon,
     DateIcon,
@@ -10,5 +10,5 @@ export {  LadIcon,
     HeartIcon,
     MenuIcon,
     PlusIcon,
-    StarIcon
+    StarIcon,
 } from './icons';
