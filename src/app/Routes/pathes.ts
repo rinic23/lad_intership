@@ -1,5 +1,5 @@
 export enum Pathes {
   MAIN = '/',
-  AUTH = 'AUTH',
+  AUTH = 'auth',
   NOTFOUND = '*',
 }
