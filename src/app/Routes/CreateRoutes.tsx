@@ -5,7 +5,7 @@ import { PrivateRoute, Pathes } from '.';
 
 export const CreateRoutes: React.FC = () => (
   <Routes>
-    <Route path={Pathes.MAIN} element={<PrivateRoute />}>
+    <Route element={<PrivateRoute />}>
       <Route path={Pathes.MAIN} element={<MainPage />} />
     </Route>
     <Route path={Pathes.AUTH} element={<AuthPage />} />
