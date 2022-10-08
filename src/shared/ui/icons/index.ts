@@ -1,1 +1,13 @@
 export { LadIcon } from './LadIcon';
+export { ArrowIcon } from './ArrowIcon';
+export { ChevronIcon } from './ChevronIcon';
+export { DateIcon } from './DateIcon';
+export { OnlineIcon } from './OnlineIcon';
+export { TimeIcon } from './TimeIcon';
+export { VkIcon } from './VkIcon';
+export { YoutubeIcon } from './YoutubeIcon';
+export { CloseIcon } from './CloseIcon';
+export { HeartIcon } from './HeartIcon';
+export { MenuIcon } from './MenuIcon';
+export { PlusIcon } from './PlusIcon';
+export { StarIcon } from './StarIcon';
