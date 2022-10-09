@@ -1,24 +1,16 @@
-import { Form } from 'antd';
-import FormItem from 'antd/es/form/FormItem';
+import { Form as FormAnt, FormItemProps } from 'antd';
+
 import React from 'react';
 import style from './FormItem.module.scss';
 
-type TProps = {
+type TProps = FormItemProps & {
   children: React.ReactNode;
-  rules?: any[];
-  name: string;
-  title:string;
 };
 
-const FormItemComponent = ({ children, rules, name, title }: TProps) => (
-  <FormItem
-    rules={rules}
-    name={name}
-    label={title}
-    className={style.form_item}
-  >
+const FormItem = ({ children, ...props }: TProps) => (
+  <FormAnt.Item className={style.form_item} {...props}>
     {children}
-  </FormItem>
+  </FormAnt.Item>
 );
 
-export default FormItemComponent;
+export default FormItem;
