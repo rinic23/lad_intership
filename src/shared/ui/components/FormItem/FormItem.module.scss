@@ -1,0 +1,17 @@
+.form_item {
+  text-align: start;
+  :global(.ant-form-item-explain-error) {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 150% !important;
+    letter-spacing: 0.02em !important;
+    color: #eb0404;
+  }
+}
+
+.form_item label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+}
