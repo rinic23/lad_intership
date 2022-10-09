@@ -2,15 +2,16 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { PrivateRoute, TRoute } from '.';
 
-export const createRoutes = (data: TRoute[]) =>
-  data.map((el: TRoute) => {
+export const createRoutes = (configRoutes: TRoute[]) =>
+  configRoutes.map((page: TRoute) => {
+    const { id, path, element, children, private: isPrivate } = page;
     const route = (
-      <Route key={el.id} path={el.path} element={el.element}>
-        {el.children && createRoutes(el.children)}
+      <Route key={id} path={path} element={element}>
+        {children && createRoutes(children)}
       </Route>
     );
-    return el.private ? (
-      <Route key={el.id} element={<PrivateRoute />}>
+    return isPrivate ? (
+      <Route key={id} element={<PrivateRoute />}>
         {route}
       </Route>
     ) : (
