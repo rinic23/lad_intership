@@ -1,5 +1,5 @@
-/* eslint-disable no-undef */
 import * as pages from 'pages';
+import { ReactNode } from 'react';
 
 export enum paths {
   MAIN = '/',
@@ -12,7 +12,7 @@ export enum paths {
 export type TRoute = {
   id: string;
   private: boolean;
-  element: JSX.Element;
+  element: ReactNode;
   path: string;
   children?: TRoute[];
 };
