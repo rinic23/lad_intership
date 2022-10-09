@@ -1,5 +1,5 @@
-import * as pages from 'pages';
-import { ReactNode } from 'react';
+/* eslint-disable no-undef */
+import * as Pages from 'pages';
 
 export enum paths {
   MAIN = '/',
@@ -11,8 +11,8 @@ export enum paths {
 
 export type TRoute = {
   id: string;
-  private: boolean;
-  element: ReactNode;
+  isPrivate: boolean;
+  element: () => JSX.Element;
   path: string;
   children?: TRoute[];
 };
@@ -20,28 +20,28 @@ export type TRoute = {
 export const configRoutes: TRoute[] = [
   {
     id: '1',
-    private: true,
-    element: pages.MainPage(),
+    isPrivate: true,
+    element: Pages.MainPage,
     path: paths.MAIN,
     children: [
       {
         id: '4',
-        private: true,
-        element: pages.InnerPage(),
+        isPrivate: true,
+        element: Pages.InnerPage,
         path: paths.INNER,
       },
     ],
   },
   {
     id: '2',
-    private: false,
-    element: pages.AuthPage(),
+    isPrivate: false,
+    element: Pages.AuthPage,
     path: paths.AUTH,
   },
   {
     id: '3',
-    private: false,
-    element: pages.Page404(),
+    isPrivate: false,
+    element: Pages.Page404,
     path: paths.NOTFOUND,
   },
 ];
