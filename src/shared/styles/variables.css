@@ -1,0 +1,53 @@
+:root {
+    /* Colors */
+    --white--100: #FFFFFF;
+    --white--200: #E7E9EC;
+
+    --black-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    
+    --blue--100: #58D9EF;
+    --blue--200: #3E76FF;
+    --blue--300: #1A5DFF;
+    --blue--400: #004BFF;
+    --blue--500: #0141DB;
+    --blue--600: #0132A8;
+    --blue--700: rgba(0, 75, 255, 0.2);    
+    --blue--800: #13171E;
+    --blue--900: #01050D;    
+    --blue-gradient: linear-gradient(180deg, rgba(0, 97, 254, 0) 9.24%, #0061FE 37.81%, #004BFF 41.68%, #01050D 83%);
+
+    --gray--100: #F3F4F5;
+    --gray--200: #F4F4F7;
+    --gray--300: #E7E9EC;
+    --gray--400: #B7BDC8;
+    --gray--500: #808286;
+    --gray--600: #86878B;
+
+    --red: #EB0404;
+
+    --pink: #F92672;
+
+    /* Fonts desktop */
+    --font-title-big: 800 80px/104px RFDewiExtended-Black, sans-serif;
+    --font-title-h1: 800 52px/68px RFDewiExtended-Black, sans-serif;
+    --font-title-h2: 800 40px/52px RFDewiExtended-Black, sans-serif;
+    --font-title-h3: 800 32px/42px RFDewiExtended-Black, sans-serif;
+    --font-title-h4: 800 24px/34px RFDewiExtended-Black, sans-serif;
+    --font-main: 600 20px/30px RFDewi-Bold, sans-serif;
+    --font-text-regular: 400 16px/24px RFDewi-Regular, sans-serif;
+    
+    --font-confid: 400 14px/21px RFDewi-Bold, sans-serif;
+    --font-btn: 600 14px/21px RFDewi-Bold, sans-serif;
+
+    --font-input: 400 16px/24px RFDewi-Regular, sans-serif;
+    --font-label: 600 16px/24px RFDewi-Bold, sans-serif;
+
+    /* Fonts mobile */
+    --font-title-big-mobile: 800 40px/52px Inter, sans-serif;
+    --font-title-h1-mobile: 800 28px/36px RFDewiExtended-Black, sans-serif;
+    --font-title-h2-mobile: 800 24px/28px RFDewiExtended-Black, sans-serif;
+    --font-title-h3-mobile: 800 20px/26px RFDewiExtended-Black, sans-serif;
+    --font-title-h4-mobile: 800 18px/25px RFDewiExtended-Black, sans-serif;
+    --font-main-mobile: 600 16px/24px RFDewi-Bold, sans-serif;
+    --font-text-regular-mobile: 400 14px/21px RFDewi-Regular, sans-serif;
+}
