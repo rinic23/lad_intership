@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 import { useAuth } from 'shared/lib';
-import { Pathes } from './pathes';
+import { paths } from './configRoutes';
 
 export const PrivateRoute: React.FC = () => {
   const isAuth = useAuth();
-  return isAuth ? <Outlet /> : <Navigate to={Pathes.AUTH} />;
+  return isAuth ? <Outlet /> : <Navigate to={paths.AUTH} />;
 };

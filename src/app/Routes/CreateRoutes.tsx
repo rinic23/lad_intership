@@ -1,14 +1,18 @@
-import { AuthPage, MainPage, Page404 } from 'pages';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { PrivateRoute, Pathes } from '.';
+
+import { PrivateRoute, configRoutes } from '.';
 
 export const CreateRoutes: React.FC = () => (
   <Routes>
-    <Route element={<PrivateRoute />}>
-      <Route path={Pathes.MAIN} element={<MainPage />} />
-    </Route>
-    <Route path={Pathes.AUTH} element={<AuthPage />} />
-    <Route path={Pathes.NOTFOUND} element={<Page404 />} />
+    {configRoutes.map((el) =>
+      el.private ? (
+        <Route key={el.id} element={<PrivateRoute />}>
+          <Route path={el.path} element={el.element} />
+        </Route>
+      ) : (
+        <Route key={el.id} path={el.path} element={el.element} />
+      ),
+    )}
   </Routes>
 );
