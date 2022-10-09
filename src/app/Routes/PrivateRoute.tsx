@@ -5,5 +5,5 @@ import { paths } from './configRoutes';
 
 export const PrivateRoute: React.FC = () => {
   const isAuth = useAuth();
-  return isAuth ? <Outlet /> : <Navigate to={paths.AUTH} />;
+  return isAuth ? <Outlet /> : <Navigate to={paths.REDIRECT} />;
 };
