@@ -11,7 +11,7 @@ type TProps = {
 export const TestComponent = ({ a }: TProps) => {
   const dispatch = useDispatch();
 
-  const count = useSelector(TestSlice.getTestCount);
+  const count: number = useSelector(TestSlice.getTestCount);
 
   const { data, isSuccess } = TestQuery.useGetTestDataQuery({ id: 0 }, { skip: true });
 
