@@ -1,16 +1,21 @@
 import React from 'react';
-import { AppRoutes } from './Routes';
 import { TestComponent } from 'features';
 import { Footer, HeaderAnyPage, HeaderMain, LadIcon, MenuPopup } from 'shared';
 import MainLayout from 'shared/ui/Layouts/MainLayout';
+import { useLocation } from 'react-router-dom';
+import { AppRoutes } from './Routes';
 
 const App = () => {
-  const [page, setPage] = React.useState<string | null>(null);
-  const [popup, setPopup] = React.useState<string>('main');
-
-  const handleMenu = (value: string | null) => {
-    setPage(value);
-  };
+  const location = useLocation();
+  const [popup, setPopup] = React.useState<string>('close-menu');
+  const navigationList: string[] = [
+    'Направления',
+    'Условия',
+    'Отбор',
+    'Отзывы',
+    'FAQ',
+    'О компании',
+  ];
 
   const handleMenuPopup = (value: string) => {
     setPopup(value);
@@ -18,18 +23,19 @@ const App = () => {
 
   return (
     <div className="App">
-      <AppRoutes />
-      <MainLayout>
-        {page === null ? (
-          <HeaderMain onClickMenu={handleMenu} onClickMenuPopup={handleMenuPopup} />
-        ) : (
-          <HeaderAnyPage onClickMenu={handleMenu} />
-        )}
-        <TestComponent a={0} />
-        <LadIcon />
-        <Footer />
-        {popup === 'open-menu' ? <MenuPopup /> : ''}
-      </MainLayout>
+      {popup === 'open-menu' ? (
+        <MenuPopup onClickClosePopup={handleMenuPopup} navigationList={navigationList} />
+      ) : (
+        <MainLayout>
+          {location.pathname === '/' ? (
+            <HeaderMain onClickMenuPopup={handleMenuPopup} navigationList={navigationList} />
+          ) : (
+            <HeaderAnyPage />
+          )}
+          <AppRoutes />
+          <Footer />
+        </MainLayout>
+      )}
     </div>
   );
 };

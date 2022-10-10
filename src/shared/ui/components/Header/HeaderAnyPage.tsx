@@ -1,39 +1,31 @@
+import { paths } from 'app/Routes/configRoutes';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'shared/ui/icons';
+import { Button } from '../Button';
 import style from './header.module.scss';
 
-type TProps = {
-  onClickMenu: (value: string | null) => void;
-};
-
-export const HeaderAnyPage: React.FC<TProps> = ({ onClickMenu }) => {
-  const changePage = (value: string | null) => {
-    onClickMenu(value);
-  };
-
-  return (
-    <header className={style.wrapper}>
-      <div className={style.container}>
-        <div
-          onKeyDown={(e) => e.target}
-          role="presentation"
-          className={style.any_page}
-          onClick={() => changePage(null)}
-        >
-          <div>
-            <ArrowLeft />
-          </div>
-          <p>На главную</p>
+export const HeaderAnyPage: React.FC = () => (
+  <header className={style.wrapper}>
+    <div className={style.container} style={{ justifyContent: 'left' }}>
+      <Link to={paths.MAIN} className={style.any_page}>
+        <div>
+          <ArrowLeft />
         </div>
-        <div
-          onKeyDown={(e) => e.target}
-          role="presentation"
-          className={style.button_any}
-          onClick={() => changePage('any_page')}
-        >
-          <button type="submit">Подать заявку</button>
-        </div>
-      </div>
-    </header>
-  );
-};
+        <p>На главную</p>
+      </Link>
+      <Button
+        size="rectangular"
+        type="default"
+        style={{
+          fontStyle: 'normal',
+          fontWeight: '400',
+          fontSize: '14px',
+          lineHeight: '150%',
+        }}
+      >
+        Подать заявку
+      </Button>
+    </div>
+  </header>
+);

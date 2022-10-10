@@ -1,5 +1,5 @@
 import React from 'react';
-import { LadIcon, VkIcon, YouTubeIcon } from 'shared/ui/icons';
+import { LadIcon, VkIcon, YoutubeIcon } from 'shared/ui/icons';
 import style from './footer.module.scss';
 
 export const Footer: React.FC = () => (
@@ -18,7 +18,7 @@ export const Footer: React.FC = () => (
           <VkIcon />
         </a>
         <a href="https://www.youtube.com/c/ITcompanyLad" target="_blank" rel="noreferrer">
-          <YouTubeIcon />
+          <YoutubeIcon />
         </a>
       </div>
     </div>

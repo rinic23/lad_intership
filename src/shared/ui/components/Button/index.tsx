@@ -8,14 +8,11 @@ type TProps = AntButtonPropsOmit & {
   children?: string;
   buttonStyleClasses?: string;
   size?: 'large' | 'medium' | 'small' | 'rectangular';
-  type?: 'default' |'light' | 'transparent';
-}
+  type?: 'default' | 'light' | 'transparent';
+};
 
-export const Button = ({
-  children,
-  size = 'medium',
-  type = 'default',
-  ...props
-}: TProps) => (
-  <ButtonAntd className={`${buttonSize[size]} ${buttonType[type]}`} {...props}>{children}</ButtonAntd>
+export const Button = ({ children, size = 'medium', type = 'default', ...props }: TProps) => (
+  <ButtonAntd className={`${buttonSize[size]} ${buttonType[type]}`} {...props}>
+    {children}
+  </ButtonAntd>
 );

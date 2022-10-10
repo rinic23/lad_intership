@@ -1,18 +1,17 @@
 import React from 'react';
 import { ExitIcon, LadIcon } from 'shared/ui/icons';
+import { Button } from '../Button';
 import style from './menu-popup.module.scss';
 
-export const MenuPopup: React.FC = () => {
-  console.log('message');
+type TProps = {
+  onClickClosePopup: (value: string) => void;
+  navigationList: string[];
+};
 
-  const navigationList: string[] = [
-    'Направления',
-    'Условия',
-    'Отбор',
-    'Отзывы',
-    'FAQ',
-    'О компании',
-  ];
+export const MenuPopup: React.FC<TProps> = ({ onClickClosePopup, navigationList }) => {
+  const closePopup = (value: string) => {
+    onClickClosePopup(value);
+  };
 
   return (
     <div className={style.container}>
@@ -20,7 +19,13 @@ export const MenuPopup: React.FC = () => {
         <div className={style.container_header_icon}>
           <LadIcon />
         </div>
-        <div className={style.container_header_exit}>
+        {/* Временный костыль вместо кнопки, нет подходящей: чтобы была прозрачная, и только по ширине вложенного объекта */}
+        <div
+          onKeyDown={(e) => e.target}
+          role="presentation"
+          style={{ cursor: 'pointer' }}
+          onClick={() => closePopup('close-menu')}
+        >
           <ExitIcon />
         </div>
       </div>
@@ -29,9 +34,20 @@ export const MenuPopup: React.FC = () => {
           <li key={item}>{item}</li>
         ))}
       </ul>
-      <div onKeyDown={(e) => e.target} role="presentation" className={style.container_button}>
-        <button type="submit">Подать заявку</button>
-      </div>
+      {/* Дополнительно пришлось прописывать button в scss, ибо кнопка не стандартная, со слов дизайнера предполагается растягивание ее на всю ширину экрана */}
+      <Button
+        size="rectangular"
+        type="default"
+        style={{
+          fontFamily: 'RFDewi-Regular',
+          fontStyle: 'normal',
+          fontWeight: '400',
+          fontSize: '14px',
+          lineHeight: '150%',
+        }}
+      >
+        Подать заявку
+      </Button>
     </div>
   );
 };
