@@ -22,30 +22,81 @@ export const TestComponent = ({ a }: TProps) => {
     <div className={style.wrapper}>
       <span>{`Test count ${count}`}</span>
       <div className={style.test_btn}>
-        <ButtonAntd onClick={buttonHandler} type="dashed">Нажми на меня</ButtonAntd>
+        <ButtonAntd onClick={buttonHandler} type="dashed">
+          Нажми на меня
+        </ButtonAntd>
       </div>
 
       {/* варианты кнопок начало */}
-      <div style={{ background: '#01050D', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <Button size="large" type="default">Click</Button>
-        <Button size="medium" type="default">Click</Button>
-        <Button size="small" type="default">Click</Button>
+      <div
+        style={{
+          background: 'var(--blue--900)',
+          padding: '10px',
+          display: 'flex',
+          justifyContent: 'space-around',
+        }}
+      >
+        <Button size="large" type="default">
+          Click
+        </Button>
+        <Button size="medium" type="default">
+          Click
+        </Button>
+        <Button size="small" type="default">
+          Click
+        </Button>
         <Button size="rectangular" type="default" {...{ icon: <PlusIcon /> }} />
       </div>
-      <div style={{ background: '#01050D', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <Button size="large" type="light">Click</Button>
+      <div
+        style={{
+          background: 'var(--blue--900)',
+          padding: '10px',
+          display: 'flex',
+          justifyContent: 'space-around',
+        }}
+      >
+        <Button size="large" type="light">
+          Click
+        </Button>
         <Button size="rectangular" type="light" {...{ icon: <PlusIcon /> }} />
       </div>
-      <div style={{ background: '#01050D', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <Button size="large" type="transparent">Click</Button>
+      <div
+        style={{
+          background: 'var(--blue--900)',
+          padding: '10px',
+          display: 'flex',
+          justifyContent: 'space-around',
+        }}
+      >
+        <Button size="large" type="transparent">
+          Click
+        </Button>
         <Button size="rectangular" type="transparent" {...{ icon: <PlusIcon /> }} />
       </div>
-      <div style={{ background: '#01050D', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <Button size="large" type="default" {...{ disabled: true }}>Click</Button>
+      <div
+        style={{
+          background: 'var(--blue--900)',
+          padding: '10px',
+          display: 'flex',
+          justifyContent: 'space-around',
+        }}
+      >
+        <Button size="large" type="default" {...{ disabled: true }}>
+          Click
+        </Button>
         <Button size="rectangular" type="default" {...{ icon: <PlusIcon />, disabled: true }} />
       </div>
-      <div style={{ background: '#ffffff', padding: '10px', display: 'flex', justifyContent: 'space-around' }}>
-        <Button size="large" type="transparent">Click</Button>
+      <div
+        style={{
+          background: '#ffffff',
+          padding: '10px',
+          display: 'flex',
+          justifyContent: 'space-around',
+        }}
+      >
+        <Button size="large" type="transparent">
+          Click
+        </Button>
         <Button size="rectangular" type="transparent" {...{ icon: <PlusIcon /> }} />
         <Button size="rectangular" type="light" {...{ icon: <PlusIcon /> }} />
       </div>

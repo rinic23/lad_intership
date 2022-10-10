@@ -8,7 +8,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #01050D;
+  background: var(--blue--900);
   padding: 16px;
 
   button {
@@ -33,15 +33,16 @@
   &_list {
     display: flex;
     flex-direction: column;
-    font-family: 'RFDewi-Bold'; 
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 140%;
+    font: var(--font-title-h4-mobile);
     list-style: none;
+    color: var(--white--100);
     padding: 0;
     margin: 0;
     text-align: center;
     gap: 24px;
+  }
+
+  a {
+    color: var(--white--100);
   }
 }

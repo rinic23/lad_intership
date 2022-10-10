@@ -6,15 +6,11 @@ $mobile-width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'RFDewi-Regular';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: #808286;
+  font: var(--font-text-regular);
+  color: var(--gray--500);
   width: 100%;
   min-height: 80px;
-  border-top: 1px solid #FFFFFF;
+  border-top: 1px solid var(--white--100);
 }
 
 .container {
@@ -37,8 +33,6 @@ $mobile-width: 320px;
     flex-direction: column;
     justify-content: space-around;
     flex-grow: 1;
-    font-size: 16px;
-    line-height: 150%;
     width: 100%;
     padding: 0;
     margin: 0;
