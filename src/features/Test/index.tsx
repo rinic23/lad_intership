@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'shared/ui/components/index';
 import { PlusIcon } from 'shared/ui/components/Button/PlusIcon';
 import { TestQuery, TestSlice } from 'store';
-import FormItem from 'antd/es/form/FormItem';
 import Select from 'shared/ui/components/Select';
+import FormItem from 'shared/ui/components/FormItem';
 import style from './TestComponent.module.scss';
 
 type TProps = {
@@ -124,7 +124,9 @@ export const TestComponent = ({ a }: TProps) => {
         >
           <Select options={options} disabled={false} placeholder="Placeholder" />
         </FormItem>
-        <Button size="large" type="default" htmlType="submit">Click</Button>
+        <Button size="large" type="default" htmlType="submit">
+          Click
+        </Button>
       </Form>
 
       {isSuccess && (
