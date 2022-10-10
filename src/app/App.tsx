@@ -1,4 +1,5 @@
 import React from 'react';
+import { AppRoutes } from './Routes';
 import { TestComponent } from 'features';
 import { Footer, HeaderAnyPage, HeaderMain, LadIcon, MenuPopup } from 'shared';
 import MainLayout from 'shared/ui/Layouts/MainLayout';
@@ -17,6 +18,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <AppRoutes />
       <MainLayout>
         {page === null ? (
           <HeaderMain onClickMenu={handleMenu} onClickMenuPopup={handleMenuPopup} />

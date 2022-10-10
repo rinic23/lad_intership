@@ -1,2 +1,17 @@
-export { LadIcon, VkIcon, YouTubeIcon, MenuIcon, ArrowLeft, ExitIcon, Footer, HeaderMain, HeaderAnyPage, MenuPopup } from './ui';
+export { LadIcon,
+    ArrowIcon,
+    ChevronIcon,
+    DateIcon,
+    OnlineIcon,
+    TimeIcon,
+    VkIcon,
+    YoutubeIcon,
+    CloseIcon,
+    HeartIcon,
+    MenuIcon,
+    PlusIcon,
+    StarIcon,
+    ExitIcon,
+    ArrowLeft
+} from './ui';
 export * as MainLayout from './ui';
