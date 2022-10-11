@@ -1,0 +1,82 @@
+.select {
+  :global(.ant-select-selector) {
+    height: 48px !important;
+    display: flex;
+    align-items: center;
+    font: var(--font-input);
+    letter-spacing: 0.02em;
+    background: var(--gray--200) !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+  }
+  :global(.ant-select-selection-placeholder) {
+    color: var(--gray--500);
+  }
+}
+
+:global(.ant-select-status-error.ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer)
+    .ant-select-selector) {
+  background: var(--gray--200);
+  border: 1px solid var(--red);
+  border-radius: 4px;
+}
+
+:global(.ant-select-single .ant-select-selector::after, .ant-select-single
+    .ant-select-selector
+    .ant-select-selection-item::after, .ant-select-single
+    .ant-select-selector
+    .ant-select-selection-placeholder::after) {
+  border: 1px solid var(--red) !important;
+}
+
+:global(.ant-select-focused) {
+  :global(.ant-select-selection-placeholder) {
+    color: var(--blue--900);
+  }
+}
+
+:global(.ant-select:hover .ant-select-selector) {
+  border: 1px solid var(--gray--400) !important;
+  border-radius: 4px !important;
+}
+
+:global(.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+    .ant-select-selector) {
+  border: 1px solid var(--blue--400) !important;
+}
+
+:global(.ant-select-open:hover .ant-select-selector) {
+  border: 1px solid var(--blue--400) !important;
+  color: var(--blue--900);
+}
+
+:global(.ant-select-open .ant-select-selector) {
+  border: 1px solid var(--blue--400) !important;
+  color: var(--blue--900);
+}
+
+:global(.ant-select-open .ant-select-selector .ant-select-selection-item) {
+  color: var(--blue--900);
+}
+
+:global(.ant-select-item-option-content) {
+  font: var(--font-input);
+  color: var(--gray--500);
+}
+
+:global(.ant-select-item-option-content:hover) {
+  color: var(--blue--900);
+  background: none !important;
+}
+:global(.ant-select-item-option-selected:not(.ant-select-item-option-disabled)) {
+  background: var(--gray--100) !important;
+}
+:global(.ant-select-item-option:hover) {
+  background: var(--gray--100) !important;
+}
+
+.select_disabled {
+  :global(.ant-select-selector) {
+    border: none !important;
+  }
+}
