@@ -15,5 +15,5 @@ export {
   ArrowLeft,
   ExitIcon,
 } from './icons';
-export { Footer, HeaderMain, HeaderAnyPage, MenuPopup } from './components';
+export { Footer, Header, HeaderSecondaryPage, MenuPopup } from './components';
 export * as MainLayout from './Layouts';

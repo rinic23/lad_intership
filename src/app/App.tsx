@@ -1,13 +1,10 @@
 import React from 'react';
-import { TestComponent } from 'features';
-import { Footer, HeaderAnyPage, HeaderMain, LadIcon, MenuPopup } from 'shared';
+import { MenuPopup } from 'shared';
 import MainLayout from 'shared/ui/Layouts/MainLayout';
-import { useLocation } from 'react-router-dom';
 import { AppRoutes } from './Routes';
 
 const App = () => {
-  const location = useLocation();
-  const [popup, setPopup] = React.useState<string>('close-menu');
+  const [open, setOpen] = React.useState(false);
   const navigationList: string[] = [
     'Направления',
     'Условия',
@@ -17,23 +14,21 @@ const App = () => {
     'О компании',
   ];
 
-  const handleMenuPopup = (value: string) => {
-    setPopup(value);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
   };
 
   return (
     <div className="App">
-      {popup === 'open-menu' ? (
-        <MenuPopup onClickClosePopup={handleMenuPopup} navigationList={navigationList} />
+      {open ? (
+        <MenuPopup onClose={onClose} navigationList={navigationList} open={open} />
       ) : (
-        <MainLayout>
-          {location.pathname === '/' ? (
-            <HeaderMain onClickMenuPopup={handleMenuPopup} navigationList={navigationList} />
-          ) : (
-            <HeaderAnyPage />
-          )}
+        <MainLayout navigationList={navigationList} showDrawer={showDrawer}>
           <AppRoutes />
-          <Footer />
         </MainLayout>
       )}
     </div>

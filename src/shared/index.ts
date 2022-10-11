@@ -14,8 +14,8 @@ export {
   StarIcon,
   ExitIcon,
   ArrowLeft,
-  HeaderMain,
-  HeaderAnyPage,
+  Header,
+  HeaderSecondaryPage,
   Footer,
   MenuPopup,
 } from './ui';

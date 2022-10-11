@@ -34,16 +34,17 @@ export const TestComponent = ({ a }: TProps) => {
           padding: '10px',
           display: 'flex',
           justifyContent: 'space-around',
+          gap: '10px',
         }}
       >
         <Button size="large" type="default">
-          Click
+          Button
         </Button>
         <Button size="medium" type="default">
-          Click
+          Button
         </Button>
         <Button size="small" type="default">
-          Click
+          Button
         </Button>
         <Button size="rectangular" type="default" {...{ icon: <PlusIcon /> }} />
       </div>

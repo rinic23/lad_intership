@@ -1,2 +1,2 @@
-export { HeaderMain } from './HeaderMain';
-export { HeaderAnyPage } from './HeaderAnyPage';
+export { Header } from './Header';
+export { HeaderSecondaryPage } from './HeaderSecondaryPage';

@@ -2,7 +2,7 @@ import React from 'react';
 import { LadIcon, VkIcon, YoutubeIcon } from 'shared/ui/icons';
 import style from './footer.module.scss';
 
-export const Footer: React.FC = () => (
+export const Footer = () => (
   <footer className={style.wrapper}>
     <div className={style.container}>
       <div className={style.ladIcon}>

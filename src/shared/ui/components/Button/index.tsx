@@ -5,7 +5,7 @@ import { buttonSize, buttonType } from './constants';
 type AntButtonPropsOmit = Omit<AntButtonProps, 'size' | 'type'>;
 
 type TProps = AntButtonPropsOmit & {
-  children?: string;
+  children?: string | React.ReactNode;
   buttonStyleClasses?: string;
   size?: 'large' | 'medium' | 'small' | 'rectangular';
   type?: 'default' | 'light' | 'transparent';
