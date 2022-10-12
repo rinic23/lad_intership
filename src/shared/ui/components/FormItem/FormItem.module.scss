@@ -1,0 +1,29 @@
+.form_item {
+  text-align: start;
+  :global(.ant-form-item-explain-error) {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 150% !important;
+    letter-spacing: 0.02em !important;
+    color: var(--red) !important;
+  }
+  :global(.ant-form-item-label
+      > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after) {
+    color: var(--blue--900);
+    font: var(--font-label);
+    display: inline-block;
+    margin-left: 4px;
+    line-height: 1;
+    content: '*';
+  }
+  :global(.ant-form-item-label
+      > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before) {
+    display: none;
+  }
+}
+
+.form_item label {
+  font: var(--font-label);
+  letter-spacing: 0.02em;
+  color: var(--blue--900);
+}
