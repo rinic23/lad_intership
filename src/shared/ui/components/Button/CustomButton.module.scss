@@ -4,13 +4,10 @@
   justify-content: center;
   width: fit-content;
   height: fit-content;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 2px solid transparent;
   box-shadow: none;
-  font-family: var(--font-title-big);
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 150%;
+  font: var(--font-btn);
   letter-spacing: 0.01em;
   &:hover {
     border: 2px solid transparent;
@@ -26,6 +23,8 @@
 .large {
   @extend .button;
   padding: 12px 24px;
+  border-radius: 6px;
+  font: var(--font-btn-big);
 }
 
 .medium {
@@ -47,6 +46,10 @@
   @extend .button;
   background-color: #004BFF;
   color: white;
+  svg path {
+    fill: white
+  }
+
   &:hover {
     background: #0141DB;
     color: white;
@@ -59,6 +62,7 @@
       fill: white
     }
   }
+
   &:active {
     background: #0132A8;
     color: white;
@@ -67,13 +71,17 @@
   &:disabled {
     background: #808286;
     color: #B7BDC8;
+    border: 2px solid transparent;
     svg path {
       fill: #B7BDC8
     }
+
     &:hover {
       background: #808286;
       color: #B7BDC8;
+      border: 2px solid transparent;
     }
+
     &:active {
       background: #808286;
       color: #B7BDC8;
@@ -91,10 +99,12 @@
   svg path {
     fill: #01050D
   }
+
   &:hover {
     background-color: #E7E9EC;
     color: #01050D;
   }
+
   &:focus {
     // в макете нет стилей
     background-color: #E7E9EC;
@@ -103,6 +113,7 @@
       fill: #01050D
     }
   }
+
   &:active {
     // в макете нет стилей
     background-color: #E7E9EC;
@@ -120,9 +131,11 @@
     fill: #1A5DFF
   }
   &:hover {
+
     background-color: rgba(0, 75, 255, 0.2);
     color: #1A5DFF;
   }
+
   &:focus {
     // в макете нет стилей
     background-color: rgba(0, 75, 255, 0.2);
@@ -131,6 +144,7 @@
       fill: #1A5DFF
     }
   }
+
   &:active {
     // в макете нет стилей
     background-color: rgba(0, 75, 255, 0.2);
