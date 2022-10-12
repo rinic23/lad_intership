@@ -2,7 +2,7 @@ import { Button as ButtonAntd, Form } from 'antd';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'shared/ui/components/index';
-import { PlusIcon } from 'shared/ui/components/Button/PlusIcon';
+import { PlusIcon } from 'shared/ui/icons/PlusIcon';
 import { TestQuery, TestSlice } from 'store';
 import Select from 'shared/ui/components/Select';
 import FormItem from 'shared/ui/components/FormItem';
