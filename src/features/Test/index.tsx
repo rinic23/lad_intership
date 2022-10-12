@@ -54,7 +54,19 @@ export const TestComponent = ({ a }: TProps) => {
         <Button size="small" type="default">
           Click
         </Button>
-        <Button size="rectangular" type="default" {...{ icon: <PlusIcon /> }} />
+        <Button size="rectangular__large" type="default" {...{ icon: <PlusIcon /> }} />
+      </div>
+      <div
+        style={{
+          background: '#01050D',
+          padding: '10px',
+          display: 'flex',
+          justifyContent: 'space-around',
+        }}
+      >
+        <Button size="rectangular__large" type="default" {...{ icon: <PlusIcon /> }} />
+        <Button size="rectangular__medium" type="default" {...{ icon: <PlusIcon /> }} />
+        <Button size="rectangular__small" type="default" {...{ icon: <PlusIcon /> }} />
       </div>
       <div
         style={{
@@ -67,7 +79,7 @@ export const TestComponent = ({ a }: TProps) => {
         <Button size="large" type="light">
           Click
         </Button>
-        <Button size="rectangular" type="light" {...{ icon: <PlusIcon /> }} />
+        <Button size="rectangular__large" type="light" {...{ icon: <PlusIcon /> }} />
       </div>
       <div
         style={{
@@ -80,7 +92,7 @@ export const TestComponent = ({ a }: TProps) => {
         <Button size="large" type="transparent">
           Click
         </Button>
-        <Button size="rectangular" type="transparent" {...{ icon: <PlusIcon /> }} />
+        <Button size="rectangular__large" type="transparent" {...{ icon: <PlusIcon /> }} />
       </div>
       <div
         style={{
@@ -93,7 +105,7 @@ export const TestComponent = ({ a }: TProps) => {
         <Button size="large" type="default" {...{ disabled: true }}>
           Click
         </Button>
-        <Button size="rectangular" type="default" {...{ icon: <PlusIcon />, disabled: true }} />
+        <Button size="rectangular__large" type="default" {...{ icon: <PlusIcon />, disabled: true }} />
       </div>
       <div
         style={{
@@ -106,8 +118,8 @@ export const TestComponent = ({ a }: TProps) => {
         <Button size="large" type="transparent">
           Click
         </Button>
-        <Button size="rectangular" type="transparent" {...{ icon: <PlusIcon /> }} />
-        <Button size="rectangular" type="light" {...{ icon: <PlusIcon /> }} />
+        <Button size="rectangular__large" type="transparent" {...{ icon: <PlusIcon /> }} />
+        <Button size="rectangular__large" type="light" {...{ icon: <PlusIcon /> }} />
       </div>
       {/* варианты кнопок конец */}
 

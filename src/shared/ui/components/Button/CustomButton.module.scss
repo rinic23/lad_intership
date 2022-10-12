@@ -9,6 +9,10 @@
   box-shadow: none;
   font: var(--font-btn);
   letter-spacing: 0.01em;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
   &:hover {
     border: 2px solid transparent;
   }
@@ -37,9 +41,23 @@
   padding: 6px 20px;
 }
 
-.rectangular {
+.rectangular__large {
   @extend .button;
   padding: 8px;
+  svg {
+    width: initial;
+    height: initial;
+  }
+}
+
+.rectangular__medium {
+  @extend .button;
+  padding: 8px;
+}
+
+.rectangular__small {
+  @extend .button;
+  padding: 4px;
 }
 
 .default {
