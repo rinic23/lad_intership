@@ -7,10 +7,10 @@ import style from './header.module.scss';
 
 type TProps = {
   navigationList: string[];
-  showDrawer: () => void;
+  clickDrawer: () => void;
 };
 
-export const Header = ({ navigationList, showDrawer }: TProps) => (
+export const Header = ({ navigationList, clickDrawer }: TProps) => (
   <header className={style.wrapper}>
     <div className={style.container}>
       <Link to={paths.MAIN} className={style.ladIcon}>
@@ -30,10 +30,10 @@ export const Header = ({ navigationList, showDrawer }: TProps) => (
           </Button>
         </Link>
         <Button
-          size="rectangular"
+          size="rectangular__medium"
           type="transparent"
           className={style.menuIcon}
-          onClick={showDrawer}
+          onClick={clickDrawer}
         >
           <MenuIcon />
         </Button>

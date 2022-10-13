@@ -8,18 +8,18 @@ import style from './menu-popup.module.scss';
 
 type TProps = {
   navigationList: string[];
-  onClose: () => void;
+  clickDrawer: () => void;
   open: boolean;
 };
 
-export const MenuPopup = ({ navigationList, onClose, open }: TProps) => (
+export const MenuPopup = ({ navigationList, clickDrawer, open }: TProps) => (
   <div className={style.container}>
     <Drawer
       title={<LadIcon />}
       closeIcon={<ExitIcon />}
       footer={
         <Button
-          size="rectangular"
+          size="rectangular__medium"
           type="default"
           style={{
             font: 'var(--font-text-regular)',
@@ -30,14 +30,14 @@ export const MenuPopup = ({ navigationList, onClose, open }: TProps) => (
         </Button>
       }
       placement="top"
-      onClose={onClose}
+      onClose={clickDrawer}
       open={open}
       height="100%"
       getContainer={false}
     >
       <ul className={style.container_list}>
         {navigationList.map((item) => (
-          <Link to={paths.INNER} key={item} onClick={onClose}>
+          <Link to={paths.INNER} key={item} onClick={clickDrawer}>
             <li>{item}</li>
           </Link>
         ))}

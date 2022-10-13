@@ -8,7 +8,12 @@
   border: 2px solid transparent;
   box-shadow: none;
   font: var(--font-text-regular);
+
   letter-spacing: 0.01em;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
   &:hover {
     border: 2px solid transparent;
   }
@@ -23,6 +28,7 @@
 .large {
   @extend .button;
   padding: 12px 24px;
+  border-radius: 6px;
 }
 
 .medium {
@@ -37,15 +43,33 @@
   padding: 5.5px 20px;
 }
 
-.rectangular {
+.rectangular__large {
   @extend .button;
   padding: 8px;
+  svg {
+    width: initial;
+    height: initial;
+  }
+}
+
+.rectangular__medium {
+  @extend .button;
+  padding: 8px;
+}
+
+.rectangular__small {
+  @extend .button;
+  padding: 4px;
 }
 
 .default {
   @extend .button;
   background-color: var(--blue--400);
   color: var(--white--100);
+  svg path {
+    fill: var(--white--100);
+  }
+  
   &:hover {
     background: var(--blue--500);
     color: var(--white--100);
@@ -55,9 +79,10 @@
     background: var(--blue--400);
     color: var(--white--100);
     svg path {
-      fill: var(--white--100)
+      fill: var(--white--100);
     }
   }
+
   &:active {
     background: var(--blue--600);
     color: var(--white--100);
@@ -66,18 +91,22 @@
   &:disabled {
     background: var(--gray--500);
     color: var(--gray--400);
+    border: 2px solid transparent;
     svg path {
-      fill: var(--gray--400)
+      fill: var(--gray--400);
     }
+
     &:hover {
       background: var(--gray--500);
       color: var(--gray--400);
+      border: 2px solid transparent;
     }
+
     &:active {
       background: var(--gray--500);
       color: var(--gray--400);
       svg path {
-        fill: var(--gray--400)
+        fill: var(--gray--400);
       }
     }
   }
@@ -88,26 +117,29 @@
   background-color: var(--white--100);
   color: var(--blue--900);
   svg path {
-    fill: var(--blue--900)
+    fill: var(--blue--900);
   }
+
   &:hover {
-    background-color: var(--gray--300);
+    background-color: var(--white--200);
     color: var(--blue--900);
   }
+
   &:focus {
     // в макете нет стилей
-    background-color: var(--gray--300);
+    background-color: var(--white--200);
     color: var(--blue--900);
     svg path {
-      fill: var(--blue--900)
+      fill: var(--blue--900);
     }
   }
+
   &:active {
     // в макете нет стилей
-    background-color: var(--gray--300);
+    background-color: var(--white--200);
     color: var(--blue--900);
     svg path {
-      fill: var(--blue--900)
+      fill: var(--blue--900);
     }
   }
 }
@@ -116,26 +148,28 @@
   background-color: transparent;
   color: var(--blue--300);
   svg path {
-    fill: var(--blue--300)
+    fill: var(--blue--300);
   }
   &:hover {
     background-color: var(--blue--700);
     color: var(--blue--300);
   }
+
   &:focus {
     // в макете нет стилей
     background-color: var(--blue--700);
     color: var(--blue--300);
     svg path {
-      fill: var(--blue--300)
+      fill: var(--blue--300);
     }
   }
+
   &:active {
     // в макете нет стилей
     background-color: var(--blue--700);
     color: var(--blue--300);
     svg path {
-      fill: var(--blue--300)
+      fill: var(--blue--300);
     }
   }
 }

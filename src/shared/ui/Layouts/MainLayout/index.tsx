@@ -6,16 +6,16 @@ import style from './main-layout.module.scss';
 type TProps = {
   children: React.ReactNode;
   navigationList: string[];
-  showDrawer: () => void;
+  clickDrawer: () => void;
 };
 
-const MainLayout = ({ children, navigationList, showDrawer }: TProps) => {
+const MainLayout = ({ children, navigationList, clickDrawer }: TProps) => {
   const location = useLocation();
 
   return (
     <div className={style.wrapper}>
       {location.pathname === '/' ? (
-        <Header navigationList={navigationList} showDrawer={showDrawer} />
+        <Header navigationList={navigationList} clickDrawer={clickDrawer} />
       ) : (
         <HeaderSecondaryPage />
       )}
