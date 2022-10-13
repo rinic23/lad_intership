@@ -7,7 +7,6 @@ export const buttonSize = {
   rectangular__large: style.rectangular__large,
   rectangular__medium: style.rectangular__medium,
   rectangular__small: style.rectangular__small,
-
 };
 
 export const buttonType = {
