@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 10px;
+  h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    margin: 15px 0;
+  }
+  a {
+    padding: 10px 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--white--100);
+    background-color: var(--blue--600);
+    border-radius: 10px;
+    transition: 0.3s;
+    &:hover {
+      background-color: var(--blue--500);
+    }
+  }
+}
