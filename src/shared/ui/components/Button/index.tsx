@@ -7,7 +7,7 @@ type AntButtonPropsOmit = Omit<AntButtonProps, 'size' | 'type'>;
 type TProps = AntButtonPropsOmit & {
   children?: string;
   buttonStyleClasses?: string;
-  size?: 'large' | 'medium' | 'small' | 'rectangular';
+  size?: 'large' | 'medium' | 'small' | 'rectangular__large' | 'rectangular__medium' | 'rectangular__small';
   type?: 'default' |'light' | 'transparent';
 }
 
