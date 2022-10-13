@@ -1,9 +1,11 @@
-import { Button as ButtonAntd } from 'antd';
+import { Button as ButtonAntd, Form } from 'antd';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'shared/ui/components/index';
 import { PlusIcon } from 'shared/ui/components/Button/PlusIcon';
 import { TestQuery, TestSlice } from 'store';
+import Select from 'shared/ui/components/Select';
+import FormItem from 'shared/ui/components/FormItem';
 import style from './TestComponent.module.scss';
 
 type TProps = {
@@ -13,7 +15,14 @@ type TProps = {
 export const TestComponent = ({ a }: TProps) => {
   const dispatch = useDispatch();
 
-  const count: number = useSelector(TestSlice.getTestCount);
+  const options = [
+    { value: 'light', label: 'Light' },
+    { value: 'bamboo', label: 'Bamboo' },
+  ];
+
+  const [form] = Form.useForm();
+
+  const count = useSelector(TestSlice.getTestCount);
 
   const { data, isSuccess } = TestQuery.useGetTestDataQuery({ id: 0 }, { skip: true });
 
@@ -102,6 +111,24 @@ export const TestComponent = ({ a }: TProps) => {
         <Button size="rectangular" type="light" {...{ icon: <PlusIcon /> }} />
       </div>
       {/* варианты кнопок конец */}
+
+      <Form form={form} layout="vertical">
+        <FormItem
+          rules={[
+            {
+              required: true,
+              message: 'Поле должно быть заполнено',
+            },
+          ]}
+          name="options"
+          label="Категория"
+        >
+          <Select options={options} disabled={false} placeholder="Placeholder" />
+        </FormItem>
+        <Button size="large" type="default" htmlType="submit">
+          Click
+        </Button>
+      </Form>
 
       {isSuccess && (
         <div>
