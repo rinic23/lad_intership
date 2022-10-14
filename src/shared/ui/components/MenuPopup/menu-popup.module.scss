@@ -1,0 +1,64 @@
+
+.container {
+  :global {
+    .ant-drawer-content{
+      background-color: var(--blue--900);
+      padding: 16px;
+      padding-top: 24px;
+    }
+
+    .ant-drawer-header {
+      border: none;
+      padding: 0;
+    }
+
+    .ant-drawer-header-title {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    .ant-drawer-title {
+      svg {
+        width: 56px;
+        height: 24px;
+      }
+    }
+
+    .ant-drawer-close {
+      padding: 0;
+      margin: 0;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .ant-drawer-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        font: var(--font-title-h4-mobile);
+        list-style: none;
+        color: var(--white--100);
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        gap: 24px;
+    
+        a {
+          color: var(--white--100);
+        }
+      }
+    }
+
+    .ant-drawer-footer {
+      border: none;
+      padding: 0;
+    }
+  }
+}

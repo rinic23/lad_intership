@@ -39,20 +39,21 @@ export const TestComponent = ({ a }: TProps) => {
       {/* варианты кнопок начало */}
       <div
         style={{
-          background: '#01050D',
+          background: 'var(--blue--900)',
           padding: '10px',
           display: 'flex',
           justifyContent: 'space-around',
+          gap: '10px',
         }}
       >
         <Button size="large" type="default">
-          Click
+          Button
         </Button>
         <Button size="medium" type="default">
-          Click
+          Button
         </Button>
         <Button size="small" type="default">
-          Click
+          Button
         </Button>
         <Button size="rectangular__large" type="default" {...{ icon: <PlusIcon /> }} />
       </div>
@@ -70,7 +71,7 @@ export const TestComponent = ({ a }: TProps) => {
       </div>
       <div
         style={{
-          background: '#01050D',
+          background: 'var(--blue--900)',
           padding: '10px',
           display: 'flex',
           justifyContent: 'space-around',
@@ -83,7 +84,7 @@ export const TestComponent = ({ a }: TProps) => {
       </div>
       <div
         style={{
-          background: '#01050D',
+          background: 'var(--blue--900)',
           padding: '10px',
           display: 'flex',
           justifyContent: 'space-around',
@@ -96,7 +97,7 @@ export const TestComponent = ({ a }: TProps) => {
       </div>
       <div
         style={{
-          background: '#01050D',
+          background: 'var(--blue--900)',
           padding: '10px',
           display: 'flex',
           justifyContent: 'space-around',
@@ -105,7 +106,11 @@ export const TestComponent = ({ a }: TProps) => {
         <Button size="large" type="default" {...{ disabled: true }}>
           Click
         </Button>
-        <Button size="rectangular__large" type="default" {...{ icon: <PlusIcon />, disabled: true }} />
+        <Button
+          size="rectangular__large"
+          type="default"
+          {...{ icon: <PlusIcon />, disabled: true }}
+        />
       </div>
       <div
         style={{
