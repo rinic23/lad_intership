@@ -4,6 +4,7 @@ import './shared/styles/index.scss';
 import { Provider } from 'react-redux';
 import { store } from 'store';
 import { BrowserRouter } from 'react-router-dom';
+import ErrorBoundary from 'app/ErrorBoundary';
 import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 
@@ -12,7 +13,9 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

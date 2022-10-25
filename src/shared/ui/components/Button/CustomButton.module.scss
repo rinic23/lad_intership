@@ -4,18 +4,20 @@
   justify-content: center;
   width: fit-content;
   height: fit-content;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 2px solid transparent;
   box-shadow: none;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 150%;
+  font: var(--font-btn);
   letter-spacing: 0.01em;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
   &:hover {
     border: 2px solid transparent;
   }
   &:focus {
-    border: 2px solid #58D9EF;
+    border: 2px solid var(--blue--100);
   }
   &:active {
     border: 2px solid transparent;
@@ -24,60 +26,85 @@
 
 .large {
   @extend .button;
-  padding: 14.5px 32px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font: var(--font-btn-big);
 }
 
 .medium {
   @extend .button;
-  padding: 12px 24px;
+  padding: 10px 20px;
 }
 
 .small {
   @extend .button;
-  padding: 8px 20px;
+  padding: 6px 20px;
 }
 
-.rectangular {
+.rectangular__large {
+  @extend .button;
+  padding: 8px;
+  svg {
+    width: initial;
+    height: initial;
+  }
+}
+
+.rectangular__medium {
   @extend .button;
   padding: 8px;
 }
 
+.rectangular__small {
+  @extend .button;
+  padding: 4px;
+}
+
 .default {
   @extend .button;
-  background-color: #004BFF;
-  color: white;
+  background-color: var(--blue--400);
+  color: var(--white--100);
+  svg path {
+    fill: var(--white--100);
+  }
+
   &:hover {
-    background: #0141DB;
-    color: white;
+    background: var(--blue--500);
+    color: var(--white--100);
   }
 
   &:focus {
-    background: #004BFF;
-    color: white;
+    background: var(--blue--400);
+    color: var(--white--100);
     svg path {
-      fill: white
+      fill: var(--white--100);
     }
   }
+
   &:active {
-    background: #0132A8;
-    color: white;
+    background: var(--blue--600);
+    color: var(--white--100);
   }
   
   &:disabled {
-    background: #808286;
-    color: #B7BDC8;
+    background: var(--gray--500);
+    color: var(--gray--400);
+    border: 2px solid transparent;
     svg path {
-      fill: #B7BDC8
+      fill: var(--gray--400);
     }
+
     &:hover {
-      background: #808286;
-      color: #B7BDC8;
+      background: var(--gray--500);
+      color: var(--gray--400);
+      border: 2px solid transparent;
     }
+
     &:active {
-      background: #808286;
-      color: #B7BDC8;
+      background: var(--gray--500);
+      color: var(--gray--400);
       svg path {
-        fill: #B7BDC8
+        fill: var(--gray--400);
       }
     }
   }
@@ -85,57 +112,63 @@
 
 .light {
   @extend .button;
-  background-color: white;
-  color: #01050D;
+  background-color: var(--white--100);
+  color: var(--blue--900);
   svg path {
-    fill: #01050D
+    fill: var(--blue--900);
   }
+
   &:hover {
-    background-color: #E7E9EC;
-    color: #01050D;
+    background-color: var(--white--200);
+    color: var(--blue--900);
   }
+
   &:focus {
     // в макете нет стилей
-    background-color: #E7E9EC;
-    color: #01050D;
+    background-color: var(--white--200);
+    color: var(--blue--900);
     svg path {
-      fill: #01050D
+      fill: var(--blue--900);
     }
   }
+
   &:active {
     // в макете нет стилей
-    background-color: #E7E9EC;
-    color: #01050D;
+    background-color: var(--white--200);
+    color: var(--blue--900);
     svg path {
-      fill: #01050D
+      fill: var(--blue--900);
     }
   }
 }
 
 .transparent {
   background-color: transparent;
-  color: #1A5DFF;
+  color: var(--blue--300);
   svg path {
-    fill: #1A5DFF
+    fill: var(--blue--300);
   }
   &:hover {
-    background-color: rgba(0, 75, 255, 0.2);
-    color: #1A5DFF;
+
+    background-color: var(--blue--700);
+    color: var(--blue--300);
   }
+
   &:focus {
     // в макете нет стилей
-    background-color: rgba(0, 75, 255, 0.2);
-    color: #1A5DFF;
+    background-color: var(--blue--700);
+    color: var(--blue--300);
     svg path {
-      fill: #1A5DFF
+      fill: var(--blue--300);
     }
   }
+
   &:active {
     // в макете нет стилей
-    background-color: rgba(0, 75, 255, 0.2);
-    color: #1A5DFF;
+    background-color: var(--blue--700);
+    color: var(--blue--300);
     svg path {
-      fill: #1A5DFF
+      fill: var(--blue--300);
     }
   }
 }

@@ -11,3 +11,5 @@ export { HeartIcon } from './HeartIcon';
 export { MenuIcon } from './MenuIcon';
 export { PlusIcon } from './PlusIcon';
 export { StarIcon } from './StarIcon';
+export { ArrowLeft } from './ArrowLeft';
+export { ExitIcon } from './ExitIcon';
