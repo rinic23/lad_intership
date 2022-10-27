@@ -1,0 +1,83 @@
+.input {
+  // General settings
+  :global(.ant-input-affix-wrapper) {
+    width: 100%;
+
+    background-color: var(--gray--100);
+
+    border-radius: 4px;
+    border: 1px solid var(--gray--100);
+
+    // On hover
+    &:hover {
+      border-color: var(--gray--400);
+    }
+
+    // On focus
+    &:focus {
+      border-color: var(--blue--400);
+      box-shadow: none;
+    }
+  }
+
+  // On enter text
+  :global(.ant-input-affix-wrapper.ant-input-affix-wrapper-focused) {
+    border-color: var(--blue--400);
+    box-shadow: none;
+  }
+
+  // Input text
+  :global(.ant-input-affix-wrapper > input.ant-input) {
+    font: var(--font-input);
+    color: var(--blue--900);
+    background-color: var(--gray--100);
+    height: 24px;
+  }
+
+  // Close icon align
+  :global(.ant-input-suffix) {
+    height: 24px;
+    margin-left: 16px;
+  }
+
+  // Close icon color
+  :global(.ant-input-clear-icon) {
+    height: 24px;
+
+    path {
+      fill: #bbbbc3;
+    }
+  }
+
+  // On error
+  :global(.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper) {
+    border-color: var(--red);
+    background-color: var(--gray--100);
+    box-shadow: none;
+  }
+
+  // Disabled
+  :global(.ant-input-affix-wrapper.ant-input-affix-wrapper-disabled) {
+    &:hover {
+      border: 1px solid var(--gray--100);
+    }
+  }
+
+  // TODO: Placeholder text color
+}
+
+.default {
+  @extend .input;
+  :global(.ant-input-affix-wrapper) {
+    height: 48px;
+    padding: 12px 16px 12px 16px;
+  }
+}
+
+.small {
+  @extend .input;
+  :global(.ant-input-affix-wrapper) {
+    height: 40px;
+    padding: 8px 12px 8px 12px;
+  }
+}
