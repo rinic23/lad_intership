@@ -150,7 +150,7 @@ export const TestComponent = ({ a }: TProps) => {
           name="test"
           label="Input"
         >
-          <Input placehoderText="Placeholder text" />
+          <Input placehoderText="Placeholder text" autoComplete="off" />
         </FormItem>
 
         <FormItem
@@ -163,7 +163,7 @@ export const TestComponent = ({ a }: TProps) => {
           name="test"
           label="Input"
         >
-          <Input placehoderText="Placeholder text" size="small" />
+          <Input placehoderText="Placeholder text" size="small" disabled />
         </FormItem>
 
         <Button size="large" type="default" htmlType="submit">

@@ -20,6 +20,16 @@
     }
   }
 
+  // Placehoder color
+  :global(.ant-input::placeholder) {
+    color: var(--gray--500);
+  }
+
+  // Placehoder color - disabled
+  :global(.ant-input-affix-wrapper-disabled .ant-input[disabled]::placeholder) {
+    color: var(--gray--400);
+  }
+
   // On enter text
   :global(.ant-input-affix-wrapper.ant-input-affix-wrapper-focused) {
     border-color: var(--blue--400);
