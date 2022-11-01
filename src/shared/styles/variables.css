@@ -1,31 +1,37 @@
 :root {
   /* Colors */
-  --white--100: #FFFFFF;
-  --white--200: #E7E9EC;
+  --white--100: #ffffff;
+  --white--200: #e7e9ec;
 
   --black-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 
-  --blue--100: #58D9EF;
-  --blue--200: #3E76FF;
-  --blue--300: #1A5DFF;
-  --blue--400: #004BFF;
-  --blue--500: #0141DB;
-  --blue--600: #0132A8;
-  --blue--700: rgba(0, 75, 255, 0.2);
-  --blue--800: #13171E;
-  --blue--900: #01050D;
-  --blue-gradient: linear-gradient(180deg, rgba(0, 97, 254, 0) 9.24%, #0061FE 37.81%, #004BFF 41.68%, #01050D 83%);
+  --blue--100: #58d9ef;
+  --blue--200: #3e76ff;
+  --blue--300: #1a5dff;
+  --blue--400: #004bff;
+  --blue--500: #0141db;
+  --blue--600: #0132a8;
+  --blue--700: #004bff33;
+  --blue--800: #13171e;
+  --blue--900: #01050d;
+  --blue-gradient: linear-gradient(
+    180deg,
+    rgba(0, 97, 254, 0) 9.24%,
+    #0061fe 37.81%,
+    #004bff 41.68%,
+    #01050d 83%
+  );
 
-  --gray--100: #F3F4F5;
-  --gray--200: #F4F4F7;
-  --gray--300: #E7E9EC;
-  --gray--400: #B7BDC8;
+  --gray--100: #f3f4f5;
+  --gray--200: #f4f4f7;
+  --gray--300: #e7e9ec;
+  --gray--400: #b7bdc8;
   --gray--500: #808286;
-  --gray--600: #86878B;
+  --gray--600: #86878b;
 
-  --red: #EB0404;
+  --red: #eb0404;
 
-  --pink: #F92672;
+  --pink: #f92672;
 
   /* Fonts desktop */
   --font-title-big: 800 80px/104px RFDewiExtended-Black, sans-serif;

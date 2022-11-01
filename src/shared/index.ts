@@ -18,5 +18,9 @@ export {
   HeaderSecondaryPage,
   Footer,
   MenuPopup,
+  Input,
+  Select,
+  Button,
+  InputCloseIcon,
 } from './ui';
 export * as MainLayout from './ui';

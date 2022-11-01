@@ -13,3 +13,4 @@ export { PlusIcon } from './PlusIcon';
 export { StarIcon } from './StarIcon';
 export { ArrowLeft } from './ArrowLeft';
 export { ExitIcon } from './ExitIcon';
+export { InputCloseIcon } from './InputCloseIcon';

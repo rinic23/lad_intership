@@ -1,11 +1,10 @@
 import { Button as ButtonAntd, Form } from 'antd';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button } from 'shared/ui/components/index';
 import { PlusIcon } from 'shared/ui/icons/PlusIcon';
 import { TestQuery, TestSlice } from 'store';
-import Select from 'shared/ui/components/Select';
 import FormItem from 'shared/ui/components/FormItem';
+import { Input, Button, Select } from 'shared';
 import style from './TestComponent.module.scss';
 
 type TProps = {
@@ -141,6 +140,32 @@ export const TestComponent = ({ a }: TProps) => {
         >
           <Select options={options} disabled={false} placeholder="Placeholder" />
         </FormItem>
+        <FormItem
+          rules={[
+            {
+              required: true,
+              message: 'Поле должно быть заполнено',
+            },
+          ]}
+          name="test"
+          label="Input"
+        >
+          <Input placehoderText="Placeholder text" autoComplete="off" />
+        </FormItem>
+
+        <FormItem
+          rules={[
+            {
+              required: true,
+              message: 'Поле должно быть заполнено',
+            },
+          ]}
+          name="test"
+          label="Input"
+        >
+          <Input placehoderText="Placeholder text" size="small" disabled />
+        </FormItem>
+
         <Button size="large" type="default" htmlType="submit">
           Click
         </Button>

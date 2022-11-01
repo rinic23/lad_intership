@@ -14,6 +14,15 @@ export {
   StarIcon,
   ArrowLeft,
   ExitIcon,
+  InputCloseIcon,
 } from './icons';
-export { Footer, Header, HeaderSecondaryPage, MenuPopup } from './components';
+export {
+  Footer,
+  Header,
+  HeaderSecondaryPage,
+  MenuPopup,
+  Input,
+  Select,
+  Button,
+} from './components';
 export * as MainLayout from './Layouts';
