@@ -4,7 +4,7 @@ $mobile-width: 320px;
 
 .wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font: var(--font-text-regular);
   color: var(--gray--500);
@@ -19,8 +19,7 @@ $mobile-width: 320px;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1200px;
-  margin: 24px 16px;
+  margin: 24px 0;
 
   .ladIcon {
     svg {
@@ -43,7 +42,7 @@ $mobile-width: 320px;
 
   li {
     list-style-type: none;
-   }
+  }
 
   .links {
     display: flex;
@@ -70,8 +69,8 @@ $mobile-width: 320px;
 @media (min-width: $tablet-width) {
   .container {
     flex-wrap: nowrap;
-    margin: 0 16px;
-  
+    margin: 0;
+
     .list {
       flex-direction: row;
       flex-wrap: nowrap;
@@ -91,7 +90,7 @@ $mobile-width: 320px;
 @media (min-width: $desctop-width) {
   .container {
     margin: 0 auto;
-  
+
     .list {
       flex-direction: row;
       flex-wrap: wrap;

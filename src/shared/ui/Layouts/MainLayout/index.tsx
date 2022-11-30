@@ -14,13 +14,15 @@ const MainLayout = ({ children, navigationList, clickDrawer }: TProps) => {
 
   return (
     <div className={style.wrapper}>
-      {location.pathname === '/' ? (
-        <Header navigationList={navigationList} clickDrawer={clickDrawer} />
-      ) : (
-        <HeaderSecondaryPage />
-      )}
-      {children}
-      <Footer />
+      <div className="container">
+        {location.pathname === '/' ? (
+          <Header navigationList={navigationList} clickDrawer={clickDrawer} />
+        ) : (
+          <HeaderSecondaryPage />
+        )}
+        {children}
+        <Footer />
+      </div>
     </div>
   );
 };
